@@ -2,6 +2,7 @@
 
 require_relative 'base'
 require_relative 'transaction'
+require_relative '../hash'
 
 module TapClutch
   module Models
@@ -36,11 +37,12 @@ module TapClutch
           }
         )
 
-        new(response.cards.first) if response.cards.first
+        return unless response.cards.first
+        new(response.cards.first.to_h.transform_keys(&:underscore))
       end
 
       def extra_records
-        Transaction.history(data.cardNumber)
+        Transaction.history(data['card_number'])
       end
     end
   end

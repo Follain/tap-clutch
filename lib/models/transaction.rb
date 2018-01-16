@@ -25,7 +25,8 @@ module TapClutch
         )
 
         response.transactions.map do |transaction|
-          new(transaction.merge(cardNumber: card_number))
+          new(transaction.merge(card_number: card_number)
+            .deep_transform_keys(&:underscore))
         end
       end
 
