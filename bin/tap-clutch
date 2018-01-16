@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'bundler'
+
+Bundler.require
+
+require_relative '../lib/runner'
+
+TapClutch::Runner.new(ARGV, stream: $stdout).perform

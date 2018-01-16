@@ -1,0 +1,1367 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://portal.clutch.com/authenticate/userpass
+    body:
+      encoding: UTF-8
+      string: password=password&username=username
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 303
+      message: See Other
+    headers:
+      Location:
+      - "/loginRedirect"
+      Set-Cookie:
+      - SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+      - portalapps_id=portalapps_session_id; Path=/; Domain=clutch.com;
+        Secure; HTTPOnly
+      - portalapps_session=portalapps_session;
+        Max-Age=604800; Expires=Tue, 23 Jan 2018 13:28:08 GMT; Path=/; Domain=clutch.com;
+        HTTPOnly
+      Content-Length:
+      - '0'
+      Connection:
+      - close
+      Date:
+      - Tue, 16 Jan 2018 13:28:08 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:09 GMT
+- request:
+    method: post
+    uri: https://portal.clutch.com/transactions/search.json
+    body:
+      encoding: UTF-8
+      string: brandId=7532&currentRange=Custom+Range&dateFrom=2018-01-14&dateTo=2018-01-15&groupId=7533&searchType=processed&timeFrom=00%3A00%3A00+am&timeTo=00%3A00%3A00+am&transactionTypes=3%2C5%2C9
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Cookie:
+      - portalapps_id=portalapps_session_id; portalapps_session=portalapps_session
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Date:
+      - Tue, 16 Jan 2018 13:28:09 GMT
+      Transfer-Encoding:
+      - chunked
+      Set-Cookie:
+      - SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+    body:
+      encoding: ASCII-8BIT
+      string: '{"tableFields":[{"field":"Request","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"External
+        ID","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Card
+        Number","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Type","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Date","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Terminal","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Amount","hidden":"false","decimals":2,"columnWidth":"15%","type":"decimal"},{"field":"Location","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Has
+        Hold","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Request","hidden":"true","decimals":null,"columnWidth":"15%","type":"text"}],"lookerData":{"data":[["cc78e4ae-cc4e-40bd-accb-2cc00eb958fd","","67f1fd6fd66b28b7a49eface875170ea570370ce394f6ecee0d6db15d30bb448","Update
+        Balance","01/14/2018 12:28:10","terminal",0,"Follain: Ecomm","Yes","<a href=\"/internalDebug/jsonRequests/find/cc78e4ae-cc4e-40bd-accb-2cc00eb958fd\"
+        target=\"new\">Link</a>"],["f5e0ec3a-da66-4bd7-a0a9-09933a7d78eb","","9d2ffa5137a6e3e5408bf67c41e692cd222705b1825c524aeac300021ad55104","Update
+        Balance","01/14/2018 12:28:10","terminal",0,"Follain: Ecomm","Yes","<a href=\"/internalDebug/jsonRequests/find/f5e0ec3a-da66-4bd7-a0a9-09933a7d78eb\"
+        target=\"new\">Link</a>"],["4c1145cd-ade0-4006-a3ae-ae47f5c6c021","","838c4643705ef4c7559c227dc0bcad1a902368fbb2143e1ce8727547c7aa3afc","Update
+        Balance","01/14/2018 13:57:28","terminal",0,"Follain: Ecomm","No","<a href=\"/internalDebug/jsonRequests/find/4c1145cd-ade0-4006-a3ae-ae47f5c6c021\"
+        target=\"new\">Link</a>"],["803983bd-f6af-4d10-9744-eb9917571e24","","2105ca31eecc802a0ac49d0bd664fce8e190bed831435914d08bfec2948c88f5","Update
+        Balance","01/14/2018 16:08:58","terminal",0,"Follain: Ecomm","Yes","<a href=\"/internalDebug/jsonRequests/find/803983bd-f6af-4d10-9744-eb9917571e24\"
+        target=\"new\">Link</a>"]]},"csvdata":"cc78e4ae-cc4e-40bd-accb-2cc00eb958fd,,67f1fd6fd66b28b7a49eface875170ea570370ce394f6ecee0d6db15d30bb448,3,1515950890,4,0,1,1,cc78e4ae-cc4e-40bd-accb-2cc00eb958fd\r\nf5e0ec3a-da66-4bd7-a0a9-09933a7d78eb,,9d2ffa5137a6e3e5408bf67c41e692cd222705b1825c524aeac300021ad55104,3,1515950890,4,0,1,1,f5e0ec3a-da66-4bd7-a0a9-09933a7d78eb\r\n4c1145cd-ade0-4006-a3ae-ae47f5c6c021,,838c4643705ef4c7559c227dc0bcad1a902368fbb2143e1ce8727547c7aa3afc,3,1515956248,4,0,1,0,4c1145cd-ade0-4006-a3ae-ae47f5c6c021\r\n803983bd-f6af-4d10-9744-eb9917571e24,,2105ca31eecc802a0ac49d0bd664fce8e190bed831435914d08bfec2948c88f5,3,1515964138,4,0,1,1,803983bd-f6af-4d10-9744-eb9917571e24"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:09 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/search
+    body:
+      encoding: UTF-8
+      string: '{"limit":1,"offset":0,"filters":{"cardNumber":"67f1fd6fd66b28b7a49eface875170ea570370ce394f6ecee0d6db15d30bb448"},"returnFields":{"balances":true,"activationDate":true}}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '442'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"cards":[{"cardNumber":"67f1fd6fd66b28b7a49eface875170ea570370ce394f6ecee0d6db15d30bb448","cardSetId":"brandgift","balances":[{"amount":0.03,"scale":2,"balanceType":"Currency","balanceCode":"USD","isHold":false},{"amount":13.36,"scale":2,"balanceType":"Currency","balanceCode":"USD","isHold":true,"holdingTransactionId":"cc78e4ae-cc4e-40bd-accb-2cc00eb958fd"}],"activationDate":"2017-10-04
+        00:00:00"}],"usedCache":false,"success":true,"requestRef":"3c05e9b6-8010-40e4-b1cc-99e3b876fc83"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:09 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/search
+    body:
+      encoding: UTF-8
+      string: '{"limit":1,"offset":0,"filters":{"cardNumber":"9d2ffa5137a6e3e5408bf67c41e692cd222705b1825c524aeac300021ad55104"},"returnFields":{"balances":true,"activationDate":true}}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '353'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"cards":[{"cardNumber":"9d2ffa5137a6e3e5408bf67c41e692cd222705b1825c524aeac300021ad55104","cardSetId":"Job32816","balances":[{"amount":10.00,"scale":2,"balanceType":"Currency","balanceCode":"USD","isHold":true,"holdingTransactionId":"f5e0ec3a-da66-4bd7-a0a9-09933a7d78eb"}],"activationDate":"2018-01-02
+        00:00:00"}],"usedCache":false,"success":true,"requestRef":"2bfdecbb-8b7a-4f28-8775-809d18092f55"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:09 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/search
+    body:
+      encoding: UTF-8
+      string: '{"limit":1,"offset":0,"filters":{"cardNumber":"838c4643705ef4c7559c227dc0bcad1a902368fbb2143e1ce8727547c7aa3afc"},"returnFields":{"balances":true,"activationDate":true}}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '295'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"cards":[{"cardNumber":"838c4643705ef4c7559c227dc0bcad1a902368fbb2143e1ce8727547c7aa3afc","cardSetId":"brandgift","balances":[{"amount":27.75,"scale":2,"balanceType":"Currency","balanceCode":"USD","isHold":false}],"activationDate":"2017-10-04
+        00:00:00"}],"usedCache":false,"success":true,"requestRef":"b2f90a0d-a1df-43b3-934e-858e71323329"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:09 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/search
+    body:
+      encoding: UTF-8
+      string: '{"limit":1,"offset":0,"filters":{"cardNumber":"2105ca31eecc802a0ac49d0bd664fce8e190bed831435914d08bfec2948c88f5"},"returnFields":{"balances":true,"activationDate":true}}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:09 GMT
+      Server:
+      - ClutchTransactionServer/2.0
+      Content-Type:
+      - application/json; charset=utf-8
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"cards":[{"cardNumber":"2105ca31eecc802a0ac49d0bd664fce8e190bed831435914d08bfec2948c88f5","cardSetId":"brandgift","balances":[{"amount":100.00,"scale":2,"balanceType":"Currency","balanceCode":"USD","isHold":true,"holdingTransactionId":"803983bd-f6af-4d10-9744-eb9917571e24"}],"activationDate":"2017-10-04
+        00:00:00"}],"usedCache":false,"success":true,"requestRef":"2ca486d8-c548-41f5-8796-b266c337c746"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:09 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/cardHistory
+    body:
+      encoding: UTF-8
+      string: '{"limit":100,"offset":0,"cardNumber":"67f1fd6fd66b28b7a49eface875170ea570370ce394f6ecee0d6db15d30bb448","restrictTransactionTypes":["ALLOCATE","UPDATE_BALANCE"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1119'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"transactionId":"cc78e4ae-cc4e-40bd-accb-2cc00eb958fd","isLegacy":false,"transactionTime":1515950890036,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":0.00}],"requestRef":"cc78e4ae-cc4e-40bd-accb-2cc00eb958fd"},{"transactionId":"3926cb26-4f72-43d0-a4b0-0ba9e91d8985","isLegacy":false,"transactionTime":1513194206445,"callType":"UPDATE_BALANCE","balanceUpdates":[],"requestRef":"3926cb26-4f72-43d0-a4b0-0ba9e91d8985"},{"transactionId":"d2459a5d-aca2-4bee-9d84-01e2a1faf346","isLegacy":false,"transactionTime":1513194206362,"callType":"ALLOCATE","balanceUpdates":[],"requestRef":"d2459a5d-aca2-4bee-9d84-01e2a1faf346"},{"transactionId":"1ed99099-4685-40a7-9f6b-09dc2e39eee7","isLegacy":false,"transactionTime":1507135486295,"location":"location","callType":"ALLOCATE","balanceUpdates":[],"requestRef":"1ed99099-4685-40a7-9f6b-09dc2e39eee7"}],"transactionCount":5,"matchCount":4,"oldestTransaction":"2017-10-04
+        16:44:46","newestTransaction":"2018-01-14 17:28:10","success":true,"requestRef":"83cb0673-a11b-4050-b812-950a0507250a"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:09 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/cardHistory
+    body:
+      encoding: UTF-8
+      string: '{"limit":100,"offset":0,"cardNumber":"9d2ffa5137a6e3e5408bf67c41e692cd222705b1825c524aeac300021ad55104","restrictTransactionTypes":["ALLOCATE","UPDATE_BALANCE"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '898'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"transactionId":"f5e0ec3a-da66-4bd7-a0a9-09933a7d78eb","isLegacy":false,"transactionTime":1515950890164,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":0.00}],"requestRef":"f5e0ec3a-da66-4bd7-a0a9-09933a7d78eb"},{"transactionId":"afc8aa20-928b-4cb0-8fe7-075c6359abd7","isLegacy":false,"transactionTime":1514925165100,"callType":"UPDATE_BALANCE","balanceUpdates":[],"requestRef":"afc8aa20-928b-4cb0-8fe7-075c6359abd7"},{"transactionId":"cd5c31d9-4c45-4aa2-8d52-2316c15d61c8","isLegacy":false,"transactionTime":1514925165009,"callType":"ALLOCATE","balanceUpdates":[],"requestRef":"cd5c31d9-4c45-4aa2-8d52-2316c15d61c8"}],"transactionCount":5,"matchCount":3,"oldestTransaction":"2018-01-02
+        20:32:45","newestTransaction":"2018-01-14 17:28:10","success":true,"requestRef":"b4c733c4-a8b8-4e18-b33c-48f95df593f0"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:09 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/cardHistory
+    body:
+      encoding: UTF-8
+      string: '{"limit":100,"offset":0,"cardNumber":"838c4643705ef4c7559c227dc0bcad1a902368fbb2143e1ce8727547c7aa3afc","restrictTransactionTypes":["ALLOCATE","UPDATE_BALANCE"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1410'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"transactionId":"4c1145cd-ade0-4006-a3ae-ae47f5c6c021","isLegacy":false,"transactionTime":1515956248016,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":-34.00}],"requestRef":"4c1145cd-ade0-4006-a3ae-ae47f5c6c021"},{"transactionId":"de3124c8-9c83-4280-a832-e11fd273ee70","isLegacy":false,"transactionTime":1515185635672,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":-38.25}],"requestRef":"de3124c8-9c83-4280-a832-e11fd273ee70"},{"transactionId":"ea7e5589-40bd-4a2b-a0ab-fd344cfefc71","isLegacy":false,"transactionTime":1513546391443,"callType":"UPDATE_BALANCE","balanceUpdates":[],"requestRef":"ea7e5589-40bd-4a2b-a0ab-fd344cfefc71"},{"transactionId":"150860fd-ae52-469a-ae15-9462d740d4c4","isLegacy":false,"transactionTime":1513546391369,"callType":"ALLOCATE","balanceUpdates":[],"requestRef":"150860fd-ae52-469a-ae15-9462d740d4c4"},{"transactionId":"2c1015e7-8db4-4513-a407-7fba56c954b5","isLegacy":false,"transactionTime":1507135482523,"location":"location","callType":"ALLOCATE","balanceUpdates":[],"requestRef":"2c1015e7-8db4-4513-a407-7fba56c954b5"}],"transactionCount":5,"matchCount":5,"oldestTransaction":"2017-10-04
+        16:44:42","newestTransaction":"2018-01-14 18:57:28","success":true,"requestRef":"6287c53e-6669-40bf-a382-1daba451b232"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:09 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/cardHistory
+    body:
+      encoding: UTF-8
+      string: '{"limit":100,"offset":0,"cardNumber":"2105ca31eecc802a0ac49d0bd664fce8e190bed831435914d08bfec2948c88f5","restrictTransactionTypes":["ALLOCATE","UPDATE_BALANCE"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1119'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"transactionId":"803983bd-f6af-4d10-9744-eb9917571e24","isLegacy":false,"transactionTime":1515964138998,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":0.00}],"requestRef":"803983bd-f6af-4d10-9744-eb9917571e24"},{"transactionId":"b780b8f0-d1e9-4eee-95ed-a377b29246d9","isLegacy":false,"transactionTime":1514863865932,"callType":"UPDATE_BALANCE","balanceUpdates":[],"requestRef":"b780b8f0-d1e9-4eee-95ed-a377b29246d9"},{"transactionId":"0688ccd6-9888-436c-b26d-a076ea8ed5f0","isLegacy":false,"transactionTime":1514863865848,"callType":"ALLOCATE","balanceUpdates":[],"requestRef":"0688ccd6-9888-436c-b26d-a076ea8ed5f0"},{"transactionId":"77197cb8-18b6-4c0f-8652-cfdc2de5afdb","isLegacy":false,"transactionTime":1507135463558,"location":"location","callType":"ALLOCATE","balanceUpdates":[],"requestRef":"77197cb8-18b6-4c0f-8652-cfdc2de5afdb"}],"transactionCount":4,"matchCount":4,"oldestTransaction":"2017-10-04
+        16:44:23","newestTransaction":"2018-01-14 21:08:58","success":true,"requestRef":"30b8424a-6dd3-4fea-97b6-824a61d4719e"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:09 GMT
+- request:
+    method: post
+    uri: https://portal.clutch.com/transactions/search.json
+    body:
+      encoding: UTF-8
+      string: brandId=7532&currentRange=Custom+Range&dateFrom=2018-01-15&dateTo=2018-01-16&groupId=7533&searchType=processed&timeFrom=00%3A00%3A00+am&timeTo=00%3A00%3A00+am&transactionTypes=3%2C5%2C9
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Cookie:
+      - portalapps_id=portalapps_session_id; portalapps_session=portalapps_session
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Date:
+      - Tue, 16 Jan 2018 13:28:10 GMT
+      Transfer-Encoding:
+      - chunked
+      Set-Cookie:
+      - SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+    body:
+      encoding: ASCII-8BIT
+      string: '{"tableFields":[{"field":"Request","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"External
+        ID","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Card
+        Number","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Type","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Date","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Terminal","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Amount","hidden":"false","decimals":2,"columnWidth":"15%","type":"decimal"},{"field":"Location","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Has
+        Hold","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Request","hidden":"true","decimals":null,"columnWidth":"15%","type":"text"}],"lookerData":{"data":[["db080bb2-73be-4b1f-8a99-ec76377767b8","","ec2d676f9d8bff29019ecbf9840faf84f59afab694faec76ae4bb7ce9ef77243","Update
+        Balance","01/15/2018 10:00:08","terminal",0,"Follain: Ecomm","Yes","<a href=\"/internalDebug/jsonRequests/find/db080bb2-73be-4b1f-8a99-ec76377767b8\"
+        target=\"new\">Link</a>"],["fa0561b8-2e72-432b-b376-377b000f722a","","b4211722084d14b81114f1ed929fb042be39bb36444e24bdd802d0b1a364122b","Update
+        Balance","01/15/2018 11:44:37","terminal",0,"Follain: Ecomm","Yes","<a href=\"/internalDebug/jsonRequests/find/fa0561b8-2e72-432b-b376-377b000f722a\"
+        target=\"new\">Link</a>"],["3312038d-a9d8-42e2-b2c3-fd5248f45179","","ce3d7977df9f27b316c64231a3441a3f62e14ae8ba0cfd7549b3cf3549a32430","Update
+        Balance","01/15/2018 11:44:37","terminal",0,"Follain: Ecomm","Yes","<a href=\"/internalDebug/jsonRequests/find/3312038d-a9d8-42e2-b2c3-fd5248f45179\"
+        target=\"new\">Link</a>"],["ffee7a8c-d2a0-47cd-ad9a-18597149bedc","","cf5004ecc8cfa141422d5f261b62519666cf92ba4b1c812b2d9621939c238771","Update
+        Balance","01/15/2018 12:25:15","terminal",0,"Follain: Ecomm","No","<a href=\"/internalDebug/jsonRequests/find/ffee7a8c-d2a0-47cd-ad9a-18597149bedc\"
+        target=\"new\">Link</a>"],["7ce25f87-ad60-4bf6-98ba-d58088ec22f6","","b73afd07345f67bc349b3eef2c8cb9ecf26403fb1c8b5c99d0a7a5ae2013afe8","Allocate","01/15/2018
+        12:25:24","terminal",0,"Follain: Ecomm","No","<a href=\"/internalDebug/jsonRequests/find/7ce25f87-ad60-4bf6-98ba-d58088ec22f6\"
+        target=\"new\">Link</a>"],["57ba0252-e7a6-4f24-8b47-9f071ce96f3e","","b73afd07345f67bc349b3eef2c8cb9ecf26403fb1c8b5c99d0a7a5ae2013afe8","Update
+        Balance","01/15/2018 12:25:24","terminal",0,"Follain: Ecomm","No","<a href=\"/internalDebug/jsonRequests/find/57ba0252-e7a6-4f24-8b47-9f071ce96f3e\"
+        target=\"new\">Link</a>"],["d93ead92-0045-4937-b43a-c1f6800dfc5c","","0adbec50a62d1bd12e79811ca18bb398edd40fb7a3f40f4b5807ea414f80238b","Update
+        Balance","01/15/2018 16:21:19","terminal",0,"Follain: Ecomm","No","<a href=\"/internalDebug/jsonRequests/find/d93ead92-0045-4937-b43a-c1f6800dfc5c\"
+        target=\"new\">Link</a>"],["33b940a7-efa2-4b4f-bd98-bf14befdb41b","","0adbec50a62d1bd12e79811ca18bb398edd40fb7a3f40f4b5807ea414f80238b","Allocate","01/15/2018
+        16:21:19","terminal",0,"Follain: Ecomm","No","<a href=\"/internalDebug/jsonRequests/find/33b940a7-efa2-4b4f-bd98-bf14befdb41b\"
+        target=\"new\">Link</a>"],["db1e83b3-0ea2-439c-908e-ffb81118ddfb","","7bc0640e02df232b37efcd7124b3ae35ab04adb8a3c7f8c5c0262c844883d10f","Update
+        Balance","01/15/2018 16:36:45","terminal",0,"Follain: Ecomm","No","<a href=\"/internalDebug/jsonRequests/find/db1e83b3-0ea2-439c-908e-ffb81118ddfb\"
+        target=\"new\">Link</a>"],["4352c8fc-959a-497e-bf5a-f4887c5c7051","","653345a8b62bcdd87be321a0779a55d6d4cfbfa73ef141b64c61fc46ac1a2e35","Update
+        Balance","01/15/2018 18:12:55","terminal",0,"Follain: Ecomm","Yes","<a href=\"/internalDebug/jsonRequests/find/4352c8fc-959a-497e-bf5a-f4887c5c7051\"
+        target=\"new\">Link</a>"]]},"csvdata":"db080bb2-73be-4b1f-8a99-ec76377767b8,,ec2d676f9d8bff29019ecbf9840faf84f59afab694faec76ae4bb7ce9ef77243,3,1516028408,4,0,1,1,db080bb2-73be-4b1f-8a99-ec76377767b8\r\nfa0561b8-2e72-432b-b376-377b000f722a,,b4211722084d14b81114f1ed929fb042be39bb36444e24bdd802d0b1a364122b,3,1516034677,4,0,1,1,fa0561b8-2e72-432b-b376-377b000f722a\r\n3312038d-a9d8-42e2-b2c3-fd5248f45179,,ce3d7977df9f27b316c64231a3441a3f62e14ae8ba0cfd7549b3cf3549a32430,3,1516034677,4,0,1,1,3312038d-a9d8-42e2-b2c3-fd5248f45179\r\nffee7a8c-d2a0-47cd-ad9a-18597149bedc,,cf5004ecc8cfa141422d5f261b62519666cf92ba4b1c812b2d9621939c238771,3,1516037115,4,0,1,0,ffee7a8c-d2a0-47cd-ad9a-18597149bedc\r\n7ce25f87-ad60-4bf6-98ba-d58088ec22f6,,b73afd07345f67bc349b3eef2c8cb9ecf26403fb1c8b5c99d0a7a5ae2013afe8,5,1516037124,4,0,1,0,7ce25f87-ad60-4bf6-98ba-d58088ec22f6\r\n57ba0252-e7a6-4f24-8b47-9f071ce96f3e,,b73afd07345f67bc349b3eef2c8cb9ecf26403fb1c8b5c99d0a7a5ae2013afe8,3,1516037124,4,0,1,0,57ba0252-e7a6-4f24-8b47-9f071ce96f3e\r\nd93ead92-0045-4937-b43a-c1f6800dfc5c,,0adbec50a62d1bd12e79811ca18bb398edd40fb7a3f40f4b5807ea414f80238b,3,1516051279,4,0,1,0,d93ead92-0045-4937-b43a-c1f6800dfc5c\r\n33b940a7-efa2-4b4f-bd98-bf14befdb41b,,0adbec50a62d1bd12e79811ca18bb398edd40fb7a3f40f4b5807ea414f80238b,5,1516051279,4,0,1,0,33b940a7-efa2-4b4f-bd98-bf14befdb41b\r\ndb1e83b3-0ea2-439c-908e-ffb81118ddfb,,7bc0640e02df232b37efcd7124b3ae35ab04adb8a3c7f8c5c0262c844883d10f,3,1516052205,4,0,1,0,db1e83b3-0ea2-439c-908e-ffb81118ddfb\r\n4352c8fc-959a-497e-bf5a-f4887c5c7051,,653345a8b62bcdd87be321a0779a55d6d4cfbfa73ef141b64c61fc46ac1a2e35,3,1516057975,4,0,1,1,4352c8fc-959a-497e-bf5a-f4887c5c7051"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:10 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/search
+    body:
+      encoding: UTF-8
+      string: '{"limit":1,"offset":0,"filters":{"cardNumber":"ec2d676f9d8bff29019ecbf9840faf84f59afab694faec76ae4bb7ce9ef77243"},"returnFields":{"balances":true,"activationDate":true}}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '356'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"cards":[{"cardNumber":"ec2d676f9d8bff29019ecbf9840faf84f59afab694faec76ae4bb7ce9ef77243","cardSetId":"brandgift","balances":[{"amount":30.00,"scale":2,"balanceType":"Currency","balanceCode":"USD","isHold":true,"holdingTransactionId":"db080bb2-73be-4b1f-8a99-ec76377767b8"}],"activationDate":"2017-10-04
+        00:00:00"}],"usedCache":false,"success":true,"requestRef":"35706876-89ae-4650-b12f-df1795ef8a3a"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:10 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/search
+    body:
+      encoding: UTF-8
+      string: '{"limit":1,"offset":0,"filters":{"cardNumber":"b4211722084d14b81114f1ed929fb042be39bb36444e24bdd802d0b1a364122b"},"returnFields":{"balances":true,"activationDate":true}}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '352'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"cards":[{"cardNumber":"b4211722084d14b81114f1ed929fb042be39bb36444e24bdd802d0b1a364122b","cardSetId":"Job32816","balances":[{"amount":6.38,"scale":2,"balanceType":"Currency","balanceCode":"USD","isHold":true,"holdingTransactionId":"fa0561b8-2e72-432b-b376-377b000f722a"}],"activationDate":"2017-12-18
+        00:00:00"}],"usedCache":false,"success":true,"requestRef":"8f4d8d98-9b46-489a-b796-a99d9de4aeb9"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:10 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/search
+    body:
+      encoding: UTF-8
+      string: '{"limit":1,"offset":0,"filters":{"cardNumber":"ce3d7977df9f27b316c64231a3441a3f62e14ae8ba0cfd7549b3cf3549a32430"},"returnFields":{"balances":true,"activationDate":true}}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '353'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"cards":[{"cardNumber":"ce3d7977df9f27b316c64231a3441a3f62e14ae8ba0cfd7549b3cf3549a32430","cardSetId":"JOB32008","balances":[{"amount":32.30,"scale":2,"balanceType":"Currency","balanceCode":"USD","isHold":true,"holdingTransactionId":"3312038d-a9d8-42e2-b2c3-fd5248f45179"}],"activationDate":"2017-10-04
+        00:00:00"}],"usedCache":false,"success":true,"requestRef":"64361633-e0d0-483c-8684-d8c5c2e03767"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:10 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/search
+    body:
+      encoding: UTF-8
+      string: '{"limit":1,"offset":0,"filters":{"cardNumber":"cf5004ecc8cfa141422d5f261b62519666cf92ba4b1c812b2d9621939c238771"},"returnFields":{"balances":true,"activationDate":true}}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '206'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"cards":[{"cardNumber":"cf5004ecc8cfa141422d5f261b62519666cf92ba4b1c812b2d9621939c238771","cardSetId":"JOB32009","balances":[],"activationDate":"2017-10-04
+        00:00:00"}],"usedCache":false,"success":true,"requestRef":"840d67f5-f2ec-463c-a3ca-a553e24ca475"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:10 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/search
+    body:
+      encoding: UTF-8
+      string: '{"limit":1,"offset":0,"filters":{"cardNumber":"b73afd07345f67bc349b3eef2c8cb9ecf26403fb1c8b5c99d0a7a5ae2013afe8"},"returnFields":{"balances":true,"activationDate":true}}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '292'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"cards":[{"cardNumber":"b73afd07345f67bc349b3eef2c8cb9ecf26403fb1c8b5c99d0a7a5ae2013afe8","cardSetId":"JOB32009","balances":[{"amount":19.13,"scale":2,"balanceType":"Currency","balanceCode":"USD","isHold":false}],"activationDate":"2018-01-15
+        00:00:00"}],"usedCache":false,"success":true,"requestRef":"b2cb0f28-8e7b-4907-a010-aa94815652c1"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:10 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/search
+    body:
+      encoding: UTF-8
+      string: '{"limit":1,"offset":0,"filters":{"cardNumber":"0adbec50a62d1bd12e79811ca18bb398edd40fb7a3f40f4b5807ea414f80238b"},"returnFields":{"balances":true,"activationDate":true}}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '292'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"cards":[{"cardNumber":"0adbec50a62d1bd12e79811ca18bb398edd40fb7a3f40f4b5807ea414f80238b","cardSetId":"JOB32009","balances":[{"amount":78.20,"scale":2,"balanceType":"Currency","balanceCode":"USD","isHold":false}],"activationDate":"2018-01-15
+        00:00:00"}],"usedCache":false,"success":true,"requestRef":"5900ee55-6171-457f-8758-fbddd8ad7b11"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:10 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/search
+    body:
+      encoding: UTF-8
+      string: '{"limit":1,"offset":0,"filters":{"cardNumber":"7bc0640e02df232b37efcd7124b3ae35ab04adb8a3c7f8c5c0262c844883d10f"},"returnFields":{"balances":true,"activationDate":true}}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '206'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"cards":[{"cardNumber":"7bc0640e02df232b37efcd7124b3ae35ab04adb8a3c7f8c5c0262c844883d10f","cardSetId":"Job32816","balances":[],"activationDate":"2017-12-24
+        00:00:00"}],"usedCache":false,"success":true,"requestRef":"fb29c494-f1af-4db6-8b10-b0beb373d8af"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:10 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/search
+    body:
+      encoding: UTF-8
+      string: '{"limit":1,"offset":0,"filters":{"cardNumber":"653345a8b62bcdd87be321a0779a55d6d4cfbfa73ef141b64c61fc46ac1a2e35"},"returnFields":{"balances":true,"activationDate":true}}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '356'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"cards":[{"cardNumber":"653345a8b62bcdd87be321a0779a55d6d4cfbfa73ef141b64c61fc46ac1a2e35","cardSetId":"brandgift","balances":[{"amount":20.00,"scale":2,"balanceType":"Currency","balanceCode":"USD","isHold":true,"holdingTransactionId":"4352c8fc-959a-497e-bf5a-f4887c5c7051"}],"activationDate":"2017-10-04
+        00:00:00"}],"usedCache":false,"success":true,"requestRef":"5ad573d5-9e39-48f4-810b-5e4e162a46f2"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:10 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/cardHistory
+    body:
+      encoding: UTF-8
+      string: '{"limit":100,"offset":0,"cardNumber":"ec2d676f9d8bff29019ecbf9840faf84f59afab694faec76ae4bb7ce9ef77243","restrictTransactionTypes":["ALLOCATE","UPDATE_BALANCE"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1119'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"transactionId":"db080bb2-73be-4b1f-8a99-ec76377767b8","isLegacy":false,"transactionTime":1516028408523,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":0.00}],"requestRef":"db080bb2-73be-4b1f-8a99-ec76377767b8"},{"transactionId":"fa1e1ab8-33c8-44c9-99f7-76138ac12c39","isLegacy":false,"transactionTime":1513350327560,"callType":"UPDATE_BALANCE","balanceUpdates":[],"requestRef":"fa1e1ab8-33c8-44c9-99f7-76138ac12c39"},{"transactionId":"83bd270b-00f1-4774-a579-524f915f71e7","isLegacy":false,"transactionTime":1513350327476,"callType":"ALLOCATE","balanceUpdates":[],"requestRef":"83bd270b-00f1-4774-a579-524f915f71e7"},{"transactionId":"75d533a9-ecb1-47f2-8a34-ec4c64876fb4","isLegacy":false,"transactionTime":1507135483483,"location":"location","callType":"ALLOCATE","balanceUpdates":[],"requestRef":"75d533a9-ecb1-47f2-8a34-ec4c64876fb4"}],"transactionCount":4,"matchCount":4,"oldestTransaction":"2017-10-04
+        16:44:43","newestTransaction":"2018-01-15 15:00:08","success":true,"requestRef":"17c3cb33-fef6-4127-a4be-44e11fce7a22"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:10 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/cardHistory
+    body:
+      encoding: UTF-8
+      string: '{"limit":100,"offset":0,"cardNumber":"b4211722084d14b81114f1ed929fb042be39bb36444e24bdd802d0b1a364122b","restrictTransactionTypes":["ALLOCATE","UPDATE_BALANCE"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '898'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"transactionId":"fa0561b8-2e72-432b-b376-377b000f722a","isLegacy":false,"transactionTime":1516034677255,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":0.00}],"requestRef":"fa0561b8-2e72-432b-b376-377b000f722a"},{"transactionId":"72044fe1-f761-42e6-8ec7-ce6d10f0050e","isLegacy":false,"transactionTime":1513632254433,"callType":"UPDATE_BALANCE","balanceUpdates":[],"requestRef":"72044fe1-f761-42e6-8ec7-ce6d10f0050e"},{"transactionId":"af463fea-8303-4bcf-a1ad-4ddc6d8c54f3","isLegacy":false,"transactionTime":1513632254347,"callType":"ALLOCATE","balanceUpdates":[],"requestRef":"af463fea-8303-4bcf-a1ad-4ddc6d8c54f3"}],"transactionCount":5,"matchCount":3,"oldestTransaction":"2017-12-18
+        21:24:14","newestTransaction":"2018-01-15 16:44:37","success":true,"requestRef":"ed66ac37-0a78-4346-95dc-348040290ea8"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:11 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/cardHistory
+    body:
+      encoding: UTF-8
+      string: '{"limit":100,"offset":0,"cardNumber":"ce3d7977df9f27b316c64231a3441a3f62e14ae8ba0cfd7549b3cf3549a32430","restrictTransactionTypes":["ALLOCATE","UPDATE_BALANCE"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1326'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"transactionId":"3312038d-a9d8-42e2-b2c3-fd5248f45179","isLegacy":false,"transactionTime":1516034677384,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":0.00}],"requestRef":"3312038d-a9d8-42e2-b2c3-fd5248f45179"},{"transactionId":"b87e6849-e0fc-4f9d-b7ec-2d3ab78f4322","isLegacy":false,"transactionTime":1512687092776,"callType":"UPDATE_BALANCE","balanceUpdates":[],"requestRef":"b87e6849-e0fc-4f9d-b7ec-2d3ab78f4322"},{"transactionId":"7e7db750-e216-478b-9f2a-d533bd569a55","isLegacy":false,"transactionTime":1512686864722,"callType":"UPDATE_BALANCE","balanceUpdates":[],"requestRef":"7e7db750-e216-478b-9f2a-d533bd569a55"},{"transactionId":"8f243755-c4b8-4c25-ac1b-1cf389483503","isLegacy":false,"transactionTime":1512686864649,"callType":"ALLOCATE","balanceUpdates":[],"requestRef":"8f243755-c4b8-4c25-ac1b-1cf389483503"},{"transactionId":"904cc993-f772-4ef1-ab2f-f7fedac4fc37","isLegacy":false,"transactionTime":1507135263169,"location":"location","callType":"ALLOCATE","balanceUpdates":[],"requestRef":"904cc993-f772-4ef1-ab2f-f7fedac4fc37"}],"transactionCount":11,"matchCount":5,"oldestTransaction":"2017-10-04
+        16:41:03","newestTransaction":"2018-01-15 16:44:37","success":true,"requestRef":"7dd02cfa-59b8-4043-93d5-94ff4316807a"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:11 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/cardHistory
+    body:
+      encoding: UTF-8
+      string: '{"limit":100,"offset":0,"cardNumber":"cf5004ecc8cfa141422d5f261b62519666cf92ba4b1c812b2d9621939c238771","restrictTransactionTypes":["ALLOCATE","UPDATE_BALANCE"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1409'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"transactionId":"ffee7a8c-d2a0-47cd-ad9a-18597149bedc","isLegacy":false,"transactionTime":1516037115311,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":-100.00}],"requestRef":"ffee7a8c-d2a0-47cd-ad9a-18597149bedc"},{"transactionId":"2c04e227-0f7f-44b6-ab01-298b421adb38","isLegacy":false,"transactionTime":1515779677197,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":0.00}],"requestRef":"2c04e227-0f7f-44b6-ab01-298b421adb38"},{"transactionId":"b9ded880-ef90-498c-8b07-7733bd558555","isLegacy":false,"transactionTime":1512937850422,"callType":"UPDATE_BALANCE","balanceUpdates":[],"requestRef":"b9ded880-ef90-498c-8b07-7733bd558555"},{"transactionId":"2d18e070-09db-4a1c-bcc1-2ab11977f4d1","isLegacy":false,"transactionTime":1512937850286,"callType":"ALLOCATE","balanceUpdates":[],"requestRef":"2d18e070-09db-4a1c-bcc1-2ab11977f4d1"},{"transactionId":"3d414d53-0862-42a6-8073-656922931644","isLegacy":false,"transactionTime":1507135327301,"location":"location","callType":"ALLOCATE","balanceUpdates":[],"requestRef":"3d414d53-0862-42a6-8073-656922931644"}],"transactionCount":9,"matchCount":5,"oldestTransaction":"2017-10-04
+        16:42:07","newestTransaction":"2018-01-15 17:25:15","success":true,"requestRef":"a6758741-5a3f-4b40-91da-bd8fbb1b37e7"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:11 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/cardHistory
+    body:
+      encoding: UTF-8
+      string: '{"limit":100,"offset":0,"cardNumber":"b73afd07345f67bc349b3eef2c8cb9ecf26403fb1c8b5c99d0a7a5ae2013afe8","restrictTransactionTypes":["ALLOCATE","UPDATE_BALANCE"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1156'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"transactionId":"57ba0252-e7a6-4f24-8b47-9f071ce96f3e","isLegacy":false,"transactionTime":1516037124839,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":19.13}],"requestRef":"57ba0252-e7a6-4f24-8b47-9f071ce96f3e"},{"transactionId":"7ce25f87-ad60-4bf6-98ba-d58088ec22f6","isLegacy":false,"transactionTime":1516037124803,"location":"location","callType":"ALLOCATE","balanceUpdates":[],"requestRef":"7ce25f87-ad60-4bf6-98ba-d58088ec22f6"},{"transactionId":"750b72b0-8625-4694-b996-dd558250694c","isLegacy":false,"transactionTime":1515005761164,"location":"location","callType":"ALLOCATE","balanceUpdates":[],"requestRef":"750b72b0-8625-4694-b996-dd558250694c"},{"transactionId":"62ce0831-ddfc-4665-92c1-ef76537e5aa0","isLegacy":false,"transactionTime":1507135330963,"location":"location","callType":"ALLOCATE","balanceUpdates":[],"requestRef":"62ce0831-ddfc-4665-92c1-ef76537e5aa0"}],"transactionCount":4,"matchCount":4,"oldestTransaction":"2017-10-04
+        16:42:10","newestTransaction":"2018-01-15 17:25:24","success":true,"requestRef":"f17e158f-7c33-42d3-b7ce-398e9a0a0be5"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:11 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/cardHistory
+    body:
+      encoding: UTF-8
+      string: '{"limit":100,"offset":0,"cardNumber":"0adbec50a62d1bd12e79811ca18bb398edd40fb7a3f40f4b5807ea414f80238b","restrictTransactionTypes":["ALLOCATE","UPDATE_BALANCE"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1156'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"transactionId":"d93ead92-0045-4937-b43a-c1f6800dfc5c","isLegacy":false,"transactionTime":1516051279700,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":78.20}],"requestRef":"d93ead92-0045-4937-b43a-c1f6800dfc5c"},{"transactionId":"33b940a7-efa2-4b4f-bd98-bf14befdb41b","isLegacy":false,"transactionTime":1516051279650,"location":"location","callType":"ALLOCATE","balanceUpdates":[],"requestRef":"33b940a7-efa2-4b4f-bd98-bf14befdb41b"},{"transactionId":"222c14a9-8e0b-44b8-94bb-bf60a9326a79","isLegacy":false,"transactionTime":1515005761122,"location":"location","callType":"ALLOCATE","balanceUpdates":[],"requestRef":"222c14a9-8e0b-44b8-94bb-bf60a9326a79"},{"transactionId":"98dacb3c-fb56-4684-9587-3b11b9cfd881","isLegacy":false,"transactionTime":1507135330963,"location":"location","callType":"ALLOCATE","balanceUpdates":[],"requestRef":"98dacb3c-fb56-4684-9587-3b11b9cfd881"}],"transactionCount":4,"matchCount":4,"oldestTransaction":"2017-10-04
+        16:42:10","newestTransaction":"2018-01-15 21:21:19","success":true,"requestRef":"5a438a14-6225-4da8-aa9d-226b2763cc06"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:11 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/cardHistory
+    body:
+      encoding: UTF-8
+      string: '{"limit":100,"offset":0,"cardNumber":"7bc0640e02df232b37efcd7124b3ae35ab04adb8a3c7f8c5c0262c844883d10f","restrictTransactionTypes":["ALLOCATE","UPDATE_BALANCE"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1107'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"transactionId":"db1e83b3-0ea2-439c-908e-ffb81118ddfb","isLegacy":false,"transactionTime":1516052205648,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":-34.00}],"requestRef":"db1e83b3-0ea2-439c-908e-ffb81118ddfb"},{"transactionId":"51b7abda-090f-41e1-b30d-491e19e33db4","isLegacy":false,"transactionTime":1514144697193,"callType":"UPDATE_BALANCE","balanceUpdates":[],"requestRef":"51b7abda-090f-41e1-b30d-491e19e33db4"},{"transactionId":"a3f2bc01-b9c2-4ee1-8c11-c4e5a7c6a3d5","isLegacy":false,"transactionTime":1514144641451,"callType":"UPDATE_BALANCE","balanceUpdates":[],"requestRef":"a3f2bc01-b9c2-4ee1-8c11-c4e5a7c6a3d5"},{"transactionId":"d1067df8-79ed-4df0-91e9-da92eee5ceae","isLegacy":false,"transactionTime":1514144641364,"callType":"ALLOCATE","balanceUpdates":[],"requestRef":"d1067df8-79ed-4df0-91e9-da92eee5ceae"}],"transactionCount":10,"matchCount":4,"oldestTransaction":"2017-12-24
+        19:44:01","newestTransaction":"2018-01-15 21:36:45","success":true,"requestRef":"9bcfefd3-6015-40d3-b0c0-975e2a9d37a6"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:11 GMT
+- request:
+    method: post
+    uri: https://api-base.example.com/cardHistory
+    body:
+      encoding: UTF-8
+      string: '{"limit":100,"offset":0,"cardNumber":"653345a8b62bcdd87be321a0779a55d6d4cfbfa73ef141b64c61fc46ac1a2e35","restrictTransactionTypes":["ALLOCATE","UPDATE_BALANCE"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Basic YXBpLWtleTphcGktc2VjcmV0
+      Brand:
+      - brand
+      Location:
+      - location
+      Terminal:
+      - terminal
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2018 13:28:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1119'
+      Server:
+      - nginx/1.12.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, brand, location, terminal, employee, employeePassword, customRequestId,
+        externalTransactionId, note, accept, content-type
+      Access-Control-Request-Method:
+      - POST, GET, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"transactionId":"4352c8fc-959a-497e-bf5a-f4887c5c7051","isLegacy":false,"transactionTime":1516057975699,"location":"location","callType":"UPDATE_BALANCE","balanceUpdates":[{"balanceType":"Currency","balanceCode":"USD","amount":0.00}],"requestRef":"4352c8fc-959a-497e-bf5a-f4887c5c7051"},{"transactionId":"80f15361-d0b1-4559-b097-ca2bf394f949","isLegacy":false,"transactionTime":1513974903977,"callType":"UPDATE_BALANCE","balanceUpdates":[],"requestRef":"80f15361-d0b1-4559-b097-ca2bf394f949"},{"transactionId":"b3af1a16-1d31-485c-b9a1-16981802f7df","isLegacy":false,"transactionTime":1513974903893,"callType":"ALLOCATE","balanceUpdates":[],"requestRef":"b3af1a16-1d31-485c-b9a1-16981802f7df"},{"transactionId":"4ba88974-6993-489d-8d13-79feb8873157","isLegacy":false,"transactionTime":1507135481324,"location":"location","callType":"ALLOCATE","balanceUpdates":[],"requestRef":"4ba88974-6993-489d-8d13-79feb8873157"}],"transactionCount":4,"matchCount":4,"oldestTransaction":"2017-10-04
+        16:44:41","newestTransaction":"2018-01-15 23:12:55","success":true,"requestRef":"1d4a51cb-c292-4142-84c1-3b2ad0119533"}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:11 GMT
+- request:
+    method: post
+    uri: https://portal.clutch.com/transactions/search.json
+    body:
+      encoding: UTF-8
+      string: brandId=7532&currentRange=Custom+Range&dateFrom=2018-01-16&dateTo=2018-01-17&groupId=7533&searchType=processed&timeFrom=00%3A00%3A00+am&timeTo=00%3A00%3A00+am&transactionTypes=3%2C5%2C9
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Cookie:
+      - portalapps_id=portalapps_session_id; portalapps_session=portalapps_session
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Date:
+      - Tue, 16 Jan 2018 13:28:11 GMT
+      Transfer-Encoding:
+      - chunked
+      Set-Cookie:
+      - SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+    body:
+      encoding: ASCII-8BIT
+      string: '{"tableFields":[{"field":"Request","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"External
+        ID","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Card
+        Number","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Type","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Date","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Terminal","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Amount","hidden":"false","decimals":2,"columnWidth":"15%","type":"decimal"},{"field":"Location","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Has
+        Hold","hidden":"false","decimals":null,"columnWidth":"15%","type":"text"},{"field":"Request","hidden":"true","decimals":null,"columnWidth":"15%","type":"text"}],"lookerData":{"data":[]},"csvdata":""}'
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 13:28:11 GMT
+recorded_with: VCR 4.0.0
