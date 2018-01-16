@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative 'base'
-require 'byebug'
 require 'active_support/time'
 
 module TapClutch
