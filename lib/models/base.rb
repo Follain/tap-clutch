@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../schema'
+require_relative '../hash'
 
 module TapClutch
   module Models
@@ -24,7 +25,7 @@ module TapClutch
       end
 
       def transform
-        data.dup
+        data.transform_keys(&:underscore)
       end
 
       def base_record

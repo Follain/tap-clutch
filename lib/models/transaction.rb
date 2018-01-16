@@ -8,7 +8,7 @@ module TapClutch
     # Models a Clutch Transaction
     class Transaction < Base
       def self.key_property
-        :transactionId
+        :transaction_id
       end
 
       def self.stream
@@ -30,22 +30,22 @@ module TapClutch
       end
 
       schema do
-        string :transactionId, :not_null
-        string :cardNumber, :not_null
-        string :requestRef
-        string :callType
-        boolean :isLegacy
+        string :transaction_id, :not_null
+        string :card_number, :not_null
+        string :request_ref
+        string :call_type
+        boolean :is_legacy
         string :location
-        string :transactionTime
-        array :balanceUpdates
+        string :transaction_time
+        array :balance_updates
       end
 
       def transform
         Time.zone = Time.now.zone
 
         super.tap do |data|
-          data.merge! 'transactionTime' =>
-            Time.zone.at(data['transactionTime'] / 1000)
+          data.merge! 'transaction_time' =>
+            Time.zone.at(data['transaction_time'] / 1000)
         end
       end
     end

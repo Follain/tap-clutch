@@ -8,7 +8,7 @@ module TapClutch
     # Models a Clutch Card
     class Card < Base
       def self.key_property
-        :cardNumber
+        :card_number
       end
 
       def self.stream
@@ -16,8 +16,9 @@ module TapClutch
       end
 
       schema do
-        string :cardNumber, :not_null
-        string :cardSetId
+        string :card_number, :not_null
+        string :card_set_id
+        string :activation_date
         array :balances
       end
 

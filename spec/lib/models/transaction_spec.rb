@@ -15,32 +15,32 @@ RSpec.describe TapClutch::Models::Transaction do
     it { is_expected.to be_a Hash }
 
     it 'returns the correct model schema for a session' do
-      expect(schema.dig :key_properties).to eq %i[transactionId]
+      expect(schema.dig :key_properties).to eq %i[transaction_id]
       expect(schema.dig :stream).to eq 'transactions'
       expect(schema.dig :type).to eq :SCHEMA
 
       types = ::TapClutch::Schema::Types
 
       expect(schema[:schema][:properties]).to eq(
-        balanceUpdates: types.array,
-        callType: types.string,
-        cardNumber: types.string(:not_null),
-        isLegacy: types.boolean,
+        balance_updates: types.array,
+        call_type: types.string,
+        card_number: types.string(:not_null),
+        is_legacy: types.boolean,
         location: types.string,
-        requestRef: types.string,
-        transactionId: types.string(:not_null),
-        transactionTime: types.string
+        request_ref: types.string,
+        transaction_id: types.string(:not_null),
+        transaction_time: types.string
       )
     end
   end
 
   describe '#transform' do
     subject(:transaction) do
-      described_class.new 'transactionTime' => 1_516_120_276_000
+      described_class.new 'transaction_time' => 1_516_120_276_000
     end
 
-    it 'converts transactionTime to a datetime from integer' do
-      expect(transaction.transform['transactionTime'])
+    it 'converts transaction_time to a datetime from integer' do
+      expect(transaction.transform['transaction_time'])
         .to eq 'Tue, 16 Jan 2018 11:31:16 EST -05:00'
     end
   end

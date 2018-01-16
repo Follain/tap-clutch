@@ -68,30 +68,30 @@ RSpec.describe TapClutch::Client do
       expect(card['type']).to eq 'RECORD'
       expect(card['stream']).to eq 'cards'
       expect(card['record'].keys)
-        .to eq %w[cardNumber cardSetId balances activationDate]
-      expect(card['record']['cardNumber']).to be_a String
-      expect(card['record']['cardSetId']).to be_a String
+        .to eq %w[card_number card_set_id balances activation_date]
+      expect(card['record']['card_number']).to be_a String
+      expect(card['record']['card_set_id']).to be_a String
       expect(card['record']['balances']).to be_an Array
-      expect(card['record']['activationDate']).to be_a String
+      expect(card['record']['activation_date']).to be_a String
 
       transaction = outputs[1]
       expect(transaction['type']).to eq 'RECORD'
       expect(transaction['stream']).to eq 'transactions'
       expect(transaction['record'].keys)
         .to eq %w[
-          transactionId isLegacy transactionTime
-          location callType balanceUpdates requestRef cardNumber
+          transaction_id is_legacy transaction_time
+          location call_type balance_updates request_ref card_number
         ]
 
-      expect(transaction['record']['transactionId']).to be_a String
-      expect(transaction['record']['isLegacy']).to be_a FalseClass
-      expect(transaction['record']['transactionTime'])
+      expect(transaction['record']['transaction_id']).to be_a String
+      expect(transaction['record']['is_legacy']).to be_a FalseClass
+      expect(transaction['record']['transaction_time'])
         .to eq '2018-01-14 12:28:10 -0500'
       expect(transaction['record']['location']).to be_a String
-      expect(transaction['record']['callType']).to be_a String
-      expect(transaction['record']['balanceUpdates']).to be_an Array
-      expect(transaction['record']['requestRef']).to be_a String
-      expect(transaction['record']['cardNumber']).to be_a String
+      expect(transaction['record']['call_type']).to be_a String
+      expect(transaction['record']['balance_updates']).to be_an Array
+      expect(transaction['record']['request_ref']).to be_a String
+      expect(transaction['record']['card_number']).to be_a String
 
       expect(outputs.last['type']).to eq 'STATE'
       expect(outputs.last['value']).to eq('start_date' => '2018-01-16')
